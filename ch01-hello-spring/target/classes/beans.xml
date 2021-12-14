@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="someService" class="com.bit.service.impl.SomeServiceImpl"/> <!--创建了一个名叫someService的对象-->
+    <!--spring把创建好的对象放到map中，spring框架有一个map存放对象
+    springMap.put(id的值,对象); eg:springMap.put("someService",new SomeServiceImpl());
+    -->
+    <bean id="someService1" class="com.bit.service.impl.SomeServiceImpl"/>
+
+    <!--spring能创建一个非自定义类，存在的某个类大的对象-->
+    <bean id="mydate" class="java.util.Date"/>
+</beans>
+
+<!--
+spring的配置文件
+1.beans:是根标签,spring把java对象称为bean。
+2.spring-beans.xsd是约束文件，和mybatis指定的   dtd是一样的
+-->
